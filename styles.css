@@ -13,7 +13,7 @@ body {
 
 .container {
   background: #fff;
-  width: 460px;
+  width: 560px;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -27,13 +27,15 @@ h1 {
 
 #todo-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   gap: 8px;
   margin-bottom: 16px;
 }
 
 #todo-input {
-  flex: 1 100%;
+  flex: 1;
+  min-width: 0;
   padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -42,13 +44,19 @@ h1 {
 
 #todo-due,
 #todo-priority {
+  flex-shrink: 0;
   padding: 8px 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 13px;
 }
 
+#todo-due {
+  width: 130px;
+}
+
 button {
+  flex-shrink: 0;
   padding: 8px 14px;
   border: none;
   background: #4a6cf7;
